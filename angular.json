@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "v-budget": {
+    "v-budget-calculator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/v-budget",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "v-budget:build"
+            "browserTarget": "v-budget-calculator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "v-budget:build:production"
+              "browserTarget": "v-budget-calculator:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "v-budget:build"
+            "browserTarget": "v-budget-calculator:build"
           }
         },
         "test": {
@@ -115,15 +115,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "v-budget:serve"
+            "devServerTarget": "v-budget-calculator:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "v-budget:serve:production"
+              "devServerTarget": "v-budget-calculator:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "v-budget"
+    }
+  },
+  "defaultProject": "v-budget-calculator"
 }

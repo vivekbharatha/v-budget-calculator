@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'v-budget'`, () => {
+  it(`should have as title 'v-budget-calculator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('v-budget');
+    expect(app.title).toEqual('v-budget-calculator');
   });
 
   it('should render title', () => {
