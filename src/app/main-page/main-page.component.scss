@@ -3,8 +3,8 @@
 .top-bar {
   display: flex;
   width: 100%;
-  height: 50px;
-  background: #dfddf5;
+  height: 40px;
+  background: #222831;
 
   justify-content: center;
   align-items: center;
@@ -15,13 +15,13 @@
     letter-spacing: 1px;
     font-weight: 900;
     text-transform: uppercase;
-    color: $dark;
+    color: white;
   }
 }
 
 .total-budget-section {
   display: flex;
-  height: 150px;
+  height: 80px;
   background: $dark;
 
   justify-content: center;
@@ -53,4 +53,9 @@
     width: 680px;
     height: 50px;
   }
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
